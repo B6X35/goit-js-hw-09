@@ -34,9 +34,8 @@ form.addEventListener('submit', (event) => {
   const currentStep = Number(step.value);
   const currentAmount = Number(amount.value);
 
-  for (let i = 1; i < currentAmount; i++) {
-  createPromise();
-
+  for (let position = 1; position <= currentAmount; position++) {
+  createPromise(position, currentDelay);
   currentDelay += currentStep;
   }
 })
